@@ -1,5 +1,9 @@
 # Signer and Protocol Agnostic Social Media (SPASM)
 
+## Terminology
+
+an `event` - a message, action, or an event that has to be signed with a private key before being propagated over the network.
+
 ## Overview
 
 Essentially, all `events` on all decentralized social media protocols are data chunks structured in a JSON object that has to be signed with a private key, which might or might not be associated with an existent blockchain.
