@@ -43,3 +43,13 @@ Example:
 ### Metadata
 
 Adding an optional `metadata` field to the signed JSON object will give developers an opportunity to add any custom data that the community didn't think about when achieving consensus on the structure of a JSON object.
+
+## Signer-agnostic solution
+
+The next step towards signer-agnostic protocol-agnostic social media commons would be giving users an opportunity to sign messages from different protocols using the private key of their choice. For example, signing DMP and Zkitter events with Nostr or PGP private keys, and vice versa, signing Nostr events with an Ethereum or PGP private keys.
+
+## Protocol-agnostic solution
+
+Users should be able to choose which messaging protocols they wish to use in order to propagate events over the Internet. Ideally, users should be able to select many supported messaging protocols when submitting an event via UI. Under the hood, the client can sign different events in different formats with different signing keys, but all those events will hold the same information, e.g. a "Hello World" message.
+
+Clients, relays, and nodes can choose which signing private keys and messaging protocols they wish to support.
