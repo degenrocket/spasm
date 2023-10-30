@@ -6,8 +6,10 @@
 1. [Examples](#examples)
 1. [Necessary fields](#necessary-fields)
     * [MIT license](#mit-license)
-    * [Protocol version](#protocol-version)
+    * [Protocol name and version](#protocol-name-and-version)
     * [Metadata](#metadata)
+    * [Content hash](#content-hash)
+    * [Username or identifier](#username-or-identifier)
 1. [Signer-agnostic solution](#signer-agnostic-solution)
 1. [Protocol-agnostic solution](#protocol-agnostic-solution)
 1. [SPASM library](#spasm-library)
@@ -119,23 +121,110 @@ The easiest solution for this problem is to add a `"license":"MIT"` field to eac
 
 Example:
 
-```
+```js
 "license":"MIT"
 ```
 
-### Protocol version
+Another approach is to add an MIT license to a `metadata` field (or `tags` in Nostr).
 
-Another proposed necessary field is a protocol version to make sure that clients, nodes, and relays can easily handle events in case if there will be a necessity to implement changes that don't provide backward compatibility.
+Metadata (object).
 
-Example:
-
+```js
+"metadata": {
+  "license":"MIT"
+}
 ```
+
+Tags (an array analogy of `metadata` in Nostr).
+
+```js
+tags: [
+  [
+    "license",
+    "MIT"
+  ],
+]
+```
+
+### Protocol name and version
+
+Another proposed necessary field is a protocol name and version to make sure that clients, nodes, and relays can distinguish between different protocols and easily handle events in case if there will be a necessity to implement changes that don't provide backward compatibility.
+
+Examples:
+
+```js
 "version":"dmp_v0.1.0"
 ```
 
+```js
+"protocol":"dmp",
+"version":"1.0.0"
+```
+
+Another approach is to add a SPASM version instead of a protocol version. The SPASM version can be added as a separate field or to a `metadata` field (or `tags` in Nostr).
+
+More discussion is needed on this topic.
+
+
 ### Metadata
 
-Adding an optional `metadata` field to the signed JSON object will give developers an opportunity to add any custom data that the community didn't think about when achieving consensus on the structure of a JSON object.
+Adding an optional `metadata` object field to the signed JSON object will give developers an opportunity to add any custom data that the community didn't think about when achieving consensus on the structure of a JSON object.
+
+Example:
+```js
+"metadata": {
+  "license":"MIT",
+  "spasm_version":"1.0.0"
+}
+```
+
+An analogy of a `metadata` field is already present in some protocols under another name, e.g. Nostr has a `tags` field, which is not an object, but an array of any amount of tags. Each separate tag is an array with an arbitrary amount of elements, meaning that any extra data can technically be passed into the `tags` field.
+
+For example, [DegenRocket](https://degenrocket.space) adds an MIT license, `spasm_version`, `spasm_target`, and `spasm_action` to each Nostr event via tags to make it compatible with the [DMP](https://github.com/degenrocket/dmp) protocol.
+
+```js
+let nostrEvent = {
+  kind: 1,
+  created_at: Math.floor(Date.now() / 1000),
+  tags: [
+    [
+      "license",
+      "MIT"
+    ],
+    [
+      "spasm_version",
+      "1.0.0"
+    ],
+    [
+      "spasm_target",
+      "0xbd934a01dc3bd9bb183bda807d35e61accf7396c527b8a3d029c20c00b294cf029997be953772da32483b077eea856e6bafcae7a2aff95ae572af25dd3e204a71b"
+    ],
+    [
+      "spasm_action",
+      "reply"
+    ]
+  ],
+  content: "not your keys, not your words",
+  pubkey: "b0635d6a9851d3aed0cd6c495b282167acf761729078d975fc341b22650b07b9",
+}
+```
+
+### Content hash
+
+WIP. It's important to identify the same content across different protocols signed with different private keys in order to avoid showing the same content to users multiple times. 
+
+More feedback is needed to determine which fields should be hashed.
+
+Here are a few proposed fields that MUST be hashed:
+- content
+- parent
+- timestamp
+
+Ideally, the hash should also include some unique username or an identifier to distinguish similar events/messages between different users.
+
+### Username or identifier
+
+WIP. It's important to come up with a universal naming service or services in order to connect together events signed with different private keys because they have different public keys associated with them.
 
 [<- back to table of contents](#table-of-contents)
 
@@ -161,28 +250,29 @@ Clients, relays, and nodes can choose which signing private keys and messaging p
 
 ## SPASM library
 
-Since achieving a full consensus on the format of a JSON object is unrealistic, there should be a library that help developers assemble an event into proper JSON objects for each protocol and deconstruct events from different protocols into one universally agreed format. Thus, different communities can use different messaging protocols with different JSON object structures, but client developers won't have to change a frontend implementation for each protocol. 
+Since achieving a full consensus on the format of a JSON object is unrealistic, there should be a library that helps developers assemble an event into proper JSON objects for each protocol and deconstruct events from different protocols into one universally agreed format. Thus, different communities can use different messaging protocols with different JSON object structures, but client developers won't have to change a frontend implementation for each protocol. 
 
 Here is an example of a SPASM object:
 
 ```
 {
-    "protocol": <protocol_name>,
-    "version": <protocol_version> (optional),
-    "id": <event_id>,
-    "root": <event_root> (optional),
-    "parent": <event_parent> (optional),
-    "signature": <event_signature>,
-    "title": <event_title> (optional),
-    "content": <event_content>,
-    "timestamp": <unix timestamp in seconds>,
-    "author": <public key>,
-    "category": <event_category> (optional),
-    "tags": <array> (optional),
-    "license": <event_license>,
-    "extra": <object> (optional),
-    "metadata": <object> (optional),
-    "original_event": <original JSON object of an event>
+  "protocol": <protocol_name>,
+  "version": <protocol_version> (optional),
+  "cryptography": <cryptography>,
+  "id": <event_id>,
+  "root": <event_root> (optional),
+  "parent": <event_parent> (optional),
+  "signature": <event_signature>,
+  "title": <event_title> (optional),
+  "content": <event_content>,
+  "timestamp": <unix timestamp in seconds>,
+  "author": <public key>,
+  "category": <event_category> (optional),
+  "tags": <array of arrays> (optional),
+  "license": <event_license>,
+  "extra": <object> (optional),
+  "metadata": <object> (optional),
+  "original_event": <original JSON object of an event>
 }
 ```
 
