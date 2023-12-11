@@ -5,7 +5,7 @@
 1. [Overview](#overview)
 1. [Examples](#examples)
 1. [Necessary fields](#necessary-fields)
-    * [MIT license](#mit-license)
+    * [License](#License)
     * [Protocol name and version](#protocol-name-and-version)
     * [Metadata](#metadata)
     * [Content hash](#content-hash)
@@ -43,7 +43,7 @@ DMP - Degen Messaging Protocol:
     "action":"react",
     "target":"https://thedefiant.io/crypto-takedown-explained/",
     "text":"important",
-    "license":"MIT"
+    "license":"SPDX-License-Identifier: CC0-1.0"
 }
 ```
 
@@ -113,25 +113,27 @@ The community can agree on the most necessary fields that must be added to all J
 
 This documentation is work in progress, so the necessary fields might change.
 
-### MIT license
+### License
 
 At the moment of writing, the vast majority of messaging protocols don't add a license field to events, which can make relays, clients, and nodes liable for distributing the copyright-protected content once the regulatory environment will change from friendly to hostile.
 
-The easiest solution for this problem is to add a `"license":"MIT"` field to each signed event.
+The easiest solution for this problem is to add the Creative Commons Zero v1.0 Universal (CC0-1.0) license to each signed event in a `license` field. (Here is a license-related [discussion](https://github.com/nostr-protocol/nips/pull/857) regards to the Nostr protocol.)
+
+Users might choose different licenses, and then the network participants can decide whether to accept or reject such actions/events.
 
 Example:
 
 ```js
-"license":"MIT"
+"license":"SPDX-License-Identifier: CC0-1.0"
 ```
 
-Another approach is to add an MIT license to a `metadata` field (or `tags` in Nostr).
+Another approach is to add the CC0-1.0 license to a `metadata` field (or `tags` in Nostr).
 
 Metadata (object).
 
 ```js
 "metadata": {
-  "license":"MIT"
+  "license":"SPDX-License-Identifier: CC0-1.0"
 }
 ```
 
@@ -141,7 +143,7 @@ Tags (an array analogy of `metadata` in Nostr).
 tags: [
   [
     "license",
-    "MIT"
+    "SPDX-License-Identifier: CC0-1.0"
   ],
 ]
 ```
@@ -173,14 +175,14 @@ Adding an optional `metadata` object field to the signed JSON object will give d
 Example:
 ```js
 "metadata": {
-  "license":"MIT",
+  "license":"SPDX-License-Identifier: CC0-1.0",
   "spasm_version":"1.0.0"
 }
 ```
 
 An analogy of a `metadata` field is already present in some protocols under another name, e.g. Nostr has a `tags` field, which is not an object, but an array of any amount of tags. Each separate tag is an array with an arbitrary amount of elements, meaning that any extra data can technically be passed into the `tags` field.
 
-For example, [DegenRocket](https://degenrocket.space) adds an MIT license, `spasm_version`, `spasm_target`, and `spasm_action` to each Nostr event via tags to make it compatible with the [DMP](https://github.com/degenrocket/dmp) protocol.
+For example, [DegenRocket](https://degenrocket.space) adds the CC0-1.0 license, `spasm_version`, `spasm_target`, and `spasm_action` to each Nostr event via tags to make it compatible with the [DMP](https://github.com/degenrocket/dmp) protocol.
 
 ```js
 let nostrEvent = {
@@ -189,7 +191,7 @@ let nostrEvent = {
   tags: [
     [
       "license",
-      "MIT"
+      "SPDX-License-Identifier: CC0-1.0"
     ],
     [
       "spasm_version",
