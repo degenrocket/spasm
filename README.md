@@ -1,6 +1,6 @@
-![spasm](https://github.com/degenrocket/spasm/blob/f00b5d86a7309a35867413293bbd95d9041077a5/static/pyramid-black.png?raw=true)
+## Signer and Protocol Agnostic Social Media (Spasm)
 
-## Signer and Protocol Agnostic Social Media (SPASM)
+![spasm](https://github.com/degenrocket/spasm/blob/f00b5d86a7309a35867413293bbd95d9041077a5/static/pyramid-black.png?raw=true)
 
 This repo is for Spasm docs [website](https://docs.spasm.network).
 
