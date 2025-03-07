@@ -1,0 +1,11 @@
+{
+  "watch": ["./docs", "./source"],
+  "ext": "js,json,md,css,html",
+  "exec": "npm run update:dev",
+  "verbose": true,
+  "legacyWatch": true,
+  "delay": 100,
+  "events": {
+    "restart": "echo '🔄 Generating docs due to file change'"
+  }
+}

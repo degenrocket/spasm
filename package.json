@@ -1,0 +1,28 @@
+{
+  "name": "spasm-docs",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Docs for Signer and Protocol Agnostic Social Media (Spasm)",
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "create:dist": "mkdir -p ./dist",
+    "copy:static": "npm run create:dist && cp ./static/* ./dist/",
+    "copy:styles": "npm run create:dist && cp ./source/styles.css ./dist/styles.css",
+    "copy:all": "npm run copy:static && npm run copy:styles",
+    "convert:docs": "node ./helper/convert.js",
+    "build": "npm run clean && npm run copy:all && npm run convert:docs",
+    "start:dev": "http-server ./dist/ -p 3002",
+    "dev": "clear && npm run copy:static && nodemon",
+    "update:dev": "npm run copy:styles && npm run convert:docs && npm run start:dev",
+    "start:prod": "pm2 start ecosystem-prod.config.js",
+    "prod": "npm run build && npm run start:prod",
+    "test": "echo 'no tests'"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1",
+    "marked": "^15.0.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

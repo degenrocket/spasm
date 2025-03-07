@@ -1,0 +1,272 @@
+:root {
+  --colorBase-light: #000000;
+  --colorBase-dark: #d8d8d8;
+  --colorBase: var(--colorBase-dark);
+
+  --colorPrimary-light: #ba14bf;
+  --colorPrimary-dark: #ba14bf;
+  --colorPrimary: var(--colorPrimary-dark);
+
+  --colorSecondary-light: #000000;
+  --colorSecondary-dark: #ffffff;
+  --colorSecondary: var(--colorSecondary-dark);
+
+  --colorHover-light: #243746;
+  --colorHover-dark: #cbd4d1;
+  --colorHover: var(--colorHover-dark);
+
+  --colorNotImportant-light: #9b8bc6;
+  --colorNotImportant-dark: #706297;
+  --colorNotImportant: var(--colorNotImportant-dark);
+
+  --colorGreen-light: #089703;
+  --colorGreen-dark: #0ad203;
+  --colorGreen: var(--colorGreen-dark);
+
+  --colorRed-light: #ff0a0a;
+  --colorRed-dark: #ff0a0a;
+  --colorRed: var(--colorRed-dark);
+
+  --colorOrange-light: #f4af0c;
+  --colorOrange-dark: #f4af0c;
+  --colorOrange: var(--colorOrange-dark);
+
+  --colorBlue-light: #3a3dff;
+  --colorBlue-dark: #3a3dff;
+  --colorBlue: var(--colorBlue-dark);
+
+  --bgBase-light: #fafafa;
+  --bgBase-dark: #0F0F0F;
+  --bgBase: var(--bgBase-dark);
+
+  --bgSecondary-light: #f0f0f0;
+  --bgSecondary-dark: #181818;
+  --bgSecondary: var(--bgSecondary-dark);
+
+  --bgHover-light: #e3e3e3;
+  --bgHover-dark: #1f1f1f;
+  --bgHover: var(--bgHover-dark);
+
+  --bgDark-light: #bbbbbb;
+  --bgDark-dark: #000000;
+  --bgDark: var(--bgDark-dark);
+
+  --borderColor-light: #ddd;
+  --borderColor-dark: #312d3e;
+  --borderColor: var(--borderColor-dark);
+}
+
+
+body {
+  color: var(--colorBase);
+  background-color: var(--bgBase);
+  font-family: sans-serif;
+  font-size: 1.2rem;
+}
+
+a {
+  color: var(--colorPrimary);
+}
+
+#toc {
+  margin-top: 2rem;
+}
+
+#toc a {
+  text-decoration: none;
+  color: var(--colorBase);
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+#toc li {
+  list-style: none;
+  margin-top: 0.8rem;
+}
+
+/* Hamburger menu styles */
+.hamburger-menu {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  z-index: 1;
+  background-color: var(--bgSecondary);
+}
+
+.hamburger-menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+  background-color: var(--colorBase);
+}
+
+#toggle-sidebar {
+  position: fixed;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  padding: 20px;
+  background-color: var(--bgSecondary);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.sidebar ul {
+  margin-bottom: 5rem;
+}
+
+/* Main content styles */
+.main-content {
+  margin-left: 240px;
+  padding: 20px;
+  max-width: 700px;
+}
+
+/* Media query for small screens */
+@media only screen and (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -240px;
+    transition: transform 0.3s ease;
+  }
+
+  #toc a {
+    font-size: 1.4rem;
+  }
+
+  #toc li {
+    margin-top: 1.5rem;
+  }
+
+  .main-content {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  #toggle-sidebar:checked + .hamburger-menu + .sidebar {
+    transform: translateX(200px);
+  }
+
+  #toggle-sidebar:checked + .hamburger-menu span {
+    background-color: var(--colorPrimary);
+  }
+}
+
+pre {
+  overflow: auto;
+  background-color: var(--bgSecondary);
+  padding: 10px;
+  border: 1px solid var(--borderColor);
+}
+
+code {
+  background-color: var(--bgSecondary);
+  padding: 0;
+  border: none;
+}
+
+img {
+  width: 100%;
+  /* max-width: 100%; */
+  height: auto;
+}
+
+blockquote {
+  background: var(--bgSecondary);
+  border-radius: 0.375rem;
+  margin: 0.2rem 0.5rem 0.2rem 0rem;
+  padding: 0.2rem 1rem;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+/* .index-page .sidebar ul li a[href="/"],              */
+/* .ecosystem-page .sidebar ul li a[href="/ecosystem"], */
+/* .faq-page .sidebar ul li a[href="/faq"] {            */
+/*   color: var(--colorPrimary) !important;             */
+/* }                                                    */
+
+.nav-link.active {
+  color: var(--colorPrimary) !important;
+}
+
+/* Style the theme switch */
+#theme-switch {
+  display: none;
+  user-select: none;
+}
+
+#theme-switch + label svg {
+  width: 1.8rem;
+  cursor: pointer;
+}
+
+#theme-switch + label svg:first-child {
+  display: block;
+}
+
+#theme-switch + label svg:last-child {
+  display: none;
+}
+
+#theme-switch:checked + label svg:first-child {
+  display: none;
+}
+
+#theme-switch:checked + label svg:last-child {
+  display: block;
+}
+
+body:has(#theme-switch:checked) {
+  --colorBase: var(--colorBase-light);
+  --colorPrimary: var(--colorPrimary-light);
+  --colorSecondary: var(--colorSecondary-light);
+  --colorHover: var(--colorHover-light);
+  --colorNotImportant: var(--colorNotImportant-light);
+  --colorGreen: var(--colorGreen-light);
+  --colorRed: var(--colorRed-light);
+  --colorOrange: var(--colorOrange-light);
+  --colorBlue: var(--colorBlue-light);
+  --bgBase: var(--bgBase-light);
+  --bgSecondary: var(--bgSecondary-light);
+  --bgHover: var(--bgHover-light);
+  --bgDark: var(--bgDark-light);
+  --borderColor: var(--borderColor-light);
+}
+
+body .img-theme-dark {
+  display: block;
+}
+
+body:has(#theme-switch:checked) .img-theme-dark {
+  display: none;
+}
+
+body .img-theme-light {
+  display: none;
+}
+
+body:has(#theme-switch:checked) .img-theme-light {
+  display: block;
+}
