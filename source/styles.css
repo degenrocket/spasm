@@ -75,7 +75,7 @@ a {
 #toc a {
   text-decoration: none;
   color: var(--colorBase);
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: bold;
 }
 
@@ -135,8 +135,14 @@ a {
   max-width: 700px;
 }
 
+/*
+.main-content section {
+  margin: auto;
+}
+*/
+
 /* Media query for small screens */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .hamburger-menu {
     display: block;
   }
