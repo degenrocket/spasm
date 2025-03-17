@@ -2,6 +2,29 @@
 const fs = require('fs/promises');
 const path = require('path');
 const marked = require('marked');
+const {
+  gfmHeadingId,
+  // getHeadingList
+} = require('marked-gfm-heading-id');
+
+const options = { prefix: "" };
+
+// Append table of contents
+// marked.use(gfmHeadingId(options), {
+//   hooks: {
+//     postprocess(html) {
+//       const headings = getHeadingList();
+//
+//       return `
+// <ul id="table-of-contents">
+//   ${headings.map(({id, raw, level}) => `<li><a href="#${id}" class="h${level}">${raw}</a></li>`)}
+// </ul>
+// ${html}`;
+//     }
+//   }
+// });
+
+marked.use(gfmHeadingId(options));
 
 const mdDir = path.join(__dirname, '../docs');
 const htmlDir = path.join(__dirname, '../dist');
@@ -26,6 +49,8 @@ async function convertToHtml() {
 
         const htmlPath = path.join(htmlDir, fileNameHtml);
         let htmlContent = templateContent
+
+        // const headings = getHeadingList(mdContentHtml)
 
         // Add class to <body> to know which page is selected
         const htmlTagIndex =

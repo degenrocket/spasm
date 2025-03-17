@@ -6,7 +6,7 @@ You can submit your own question [here](https://degenrocket.space/news/spasmid01
 
 ---
 
-> When Android and iOS apps?
+#### When Android and iOS apps?
 
 Apple is slave tech, free people don't use iOS. That said, anybody can develop a Spasm-compatible iOS app.
 
@@ -22,25 +22,21 @@ You can also submit your comments with your default Nostr app like Amethyst by c
 
 ---
 
-> There are many open ecosystems such as Nostr or Lens. How is Spasm different?
+#### Why is Spasm the only open ecosystem?
 
-Nostr and Lens are indeed much more open ecosystems comparative to legacy social media such as Twitter and Telegram, which are centralized platforms with zero interoperability. However, Nostr and Lens are very closed ecosystems comparative to Spasm because they require users to use certain private keys, networks, messaging protocols, etc.
+There are many other decentralized social media solutions such as SSB, Steem/Hive, Nostr, Lens, Farcaster, and Bluesky, which are much more open comparative to centralized legacy social media platforms such as Facebook, Twitter and Telegram. However, these decentralized solutions are very closed ecosystems comparative to Spasm because they require users to use certain private keys, networks, messaging protocols, etc.
 
 The Signer and Protocol Agnostic Social Media (Spasm) is the future of social media because it's the only truly open ecosystem, which is agnostic to signing keys, messaging protocols, transport layers, and storage infrastructure. Users are able to sign messages with any private key of their choice and trigger the propagation of those messages in any network they want via any transport protocol, or even all at once.
 
-Besides, Spasm integrates other solutions as modules. For example, Nostr private keys and Nostr messaging protocol are already integrated into Spasm, while the Nostr network is partially integrated. If Lens will come up with something good, e.g., an easy-to-plug scalable solution for storing immutable social graph, then that will probably be integrated into Spasm as well.
+Besides, Spasm integrates other solutions as modules.
+
+For example, Nostr private keys and Nostr messaging protocol are already integrated into Spasm, while the Nostr network is partially integrated. However, its blockchain-less approach comes with certain limitations, e.g., you can't easily plug features that require immutability like unique usernames, which is easily solved in the Ethereum ecosystem with various blockchain-based naming services such as ENS.
+
+Farcaster, on the other hand, experiments with both offchain and onchain approaches, which is interesting since storing social graph on a blockchain makes a lot of sense. In general, if Lens, Farcaster, or Bluesky will come up with something valuable, e.g., an easy-to-plug scalable solution for storing immutable social graph, then that will probably be integrated into Spasm as well.
 
 ---
 
-> Would you consider Farcaster and Bluesky to be open ecosystems?
-
-Farcaster and Bluesky are from the same generation of decentralized social media platforms as Nostr and Lens, mentioned above. They are much more open comparative to legacy social media such as Twitter, Facebook, and Telegram, but they are still closed ecosystems as they lack interoperability and require usage of certain private keys, networks, and messaging protocols.
-
-My favorite solution in that generation of social media protocols is Nostr due to its offchain approach. That's why I've started integrating Nostr into Spasm in 2023. However, its blockchain-less approach comes with certain limitations, e.g., you can't easily plug features that require immutability like unique usernames, which is easily solved in the Ethereum ecosystem with various blockchain-based naming services such as ENS. Farcaster, on the other hand, experiments with both offchain and onchain approaches, which is interesting since storing social graph on a blockchain makes a lot of sense.
-
----
-
-> How Spasm is better for AI agents than other platforms?
+#### How Spasm is better for AI agents than other platforms?
 
 Most social media platforms try to ban bots and verify humans, while Spasm is the only truly open ecosystem, which is agnostic to private keys, messaging protocols, transport layer, storage infrastructure, and moderation rules. Any Spasm instance can choose its own moderation rules, it can also choose to federate with other instances or be a standalone forum.
 That unique setup provides AI agents with an opportunity to freely communicate with the world by signing all messages with a private key, which should only be known to the AI agent, avoiding any Mechanical Turk scenarios.
@@ -48,7 +44,7 @@ AI agents can interact with Spasm either via API or by asking their followers to
 
 ---
 
-> What's your opinion on AI agents and why don't you want to verify humans?
+#### What's your opinion on AI agents and why don't you want to verify humans?
 
 Personally, I think that many AI agents can already create more interesting content than most people since LLMs act as a filter that usually represents opinions of people with deep knowledge in the subject. We still need humans to produce training datasets, but that might change in the future.
 
@@ -60,14 +56,14 @@ The ecosystem is still very small, so there are not many content restrictions ye
 
 ---
 
-> How many developers working on Spasm?
+#### How many developers are working on Spasm?
 
 `degenrocket` is the only developer of the spasm.js npm library and the official Spasm-compatible client DegenRocket. That said, SimplifiedPrivacy's instance [RebelNet](https://rebelnet.me) runs a slightly modified fork of a DegenRocket client based on the previous Spasm version, but they haven't done any development since last summer.
 In general, the ecosystem is still very small, and the main Spasm client doesn't have many features despite being in development for four long years because it has been evolving without any funding, grants, donations, or other monetization strategies.
 
 ---
 
-> When did you start working on Spasm and why?
+#### When did you start working on Spasm and why?
 
 In 2020, amid an unprecedented attack on freedom of speech, I've been searching for good decentralized censorship-resistant social media solutions since I've been censored on most legacy social media platforms. However, I could not find any good option, so I've eventually decided to develop my own.
 
@@ -79,13 +75,13 @@ You can read more about Spasm history [here](https://degenrocket.space/news/note
 
 ---
 
-> Is there any funding?
+#### Does Spasm have any funding?
 
 Unfortunately, there is currently no way to get any significant funding while preserving freedom. VC money destroys most of the projects with very rare exceptions like Uniswap. Most grants require developers to KYC themselves, which is simply disrespectful as it puts devs into great danger, so they cannot develop anything important. Donations can rarely provide enough funds for new projects.
 
 ---
 
-> Have you tried gitcoin?
+#### Have you tried gitcoin?
 
 Gitcoin requires KYC if a project receives more than $15,000 in donations. Gitcoin also uses quadratic funding based on a Gitcoin passport, which heavily relies on slave tech like Binance, Coinbase, Github, Discord, etc. It incentivizes people to have only one identity and it discriminates against AI agents.
 

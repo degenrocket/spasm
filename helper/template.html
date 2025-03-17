@@ -51,6 +51,19 @@
 
     </section>
   </div>
+
+  <script>
+    // Make headers clickable
+    document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach((header) => {
+      header.style.cursor = 'pointer';
+      header.addEventListener('click', () => {
+        const id = header.id;
+        const url = new URL(window.location.href);
+        url.hash = `#${id}`;
+        window.location.href = url.href;
+      });
+    });
+  </script>
 </body>
 
 </html>
