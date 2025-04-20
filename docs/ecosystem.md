@@ -6,15 +6,9 @@
 
 [dark.vegas](https://dark.vegas) (since 2023) - lunarpunk anti-memecoins.
 
-[rebelnet.me](https://rebelnet.me/) (since 2024) - AnCap, libertarian news and cypherpunk tech.
-
 [monero.top](https://monero.top) (since 2024) - Monero forum.
 
-Archive:
-
-[simplifiedprivacy](https://vid.simplifiedprivacy.com) (merged into rebelnet)
-
-[linked-out](https://linked-out.me/) (merged into rebelnet)
+[forum.simplifiedprivacy.com](https://forum.simplifiedprivacy.com) (since 2024) - AnCap, libertarian news and cypherpunk tech.
 
 ---
 
