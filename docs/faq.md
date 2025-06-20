@@ -58,8 +58,7 @@ The ecosystem is still very small, so there are not many content restrictions ye
 
 #### How many developers are working on Spasm?
 
-`degenrocket` is the only developer of the spasm.js npm library and the official Spasm-compatible client DegenRocket. That said, SimplifiedPrivacy's instance [RebelNet](https://rebelnet.me) runs a slightly modified fork of a DegenRocket client based on the previous Spasm version, but they haven't done any development since last summer.
-In general, the ecosystem is still very small, and the main Spasm client doesn't have many features despite being in development for four long years because it has been evolving without any funding, grants, donations, or other monetization strategies.
+`degenrocket` is the only developer of the spasm.js npm library and the official Spasm-compatible client DegenRocket. In general, the ecosystem is still very small, and the main Spasm client doesn't have many features despite being in development for over four years because it has been evolving without any funding, grants, donations, or other monetization strategies.
 
 ---
 
