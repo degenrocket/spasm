@@ -36,6 +36,24 @@ Farcaster, on the other hand, experiments with both offchain and onchain approac
 
 ---
 
+#### Why not use Nostr?
+
+Nostr is a nice solution. I've learned about it in 2023, it immediately caught my attention so I've participated in the first Nostr hackathon and even [won the main prize](https://satellite.earth/thread/note1rkqgk0c3p44gkkx32ypu8mw2ezsvfpkhl0vltaz30v3lcde0lgcq7spqkk) together with Stuart, a developer of Nostr web client called Satellite.
+
+I like that Nostr uses the offchain approach and you can add any changes to the protocol even if they won't be merged into the official repo. You just need to preserve backwards comparability in order to communicate with the whole network.
+
+That said, there are multiple issues with Nostr and its community. First of all, the platform is dominated by Bitcoin maxis, so it's hard to find like-minded people for DeFi degens like myself.
+
+Another issue is that Nostr in its current form suits better to users who want to consume social-graph-based Twitter-like feeds, while I prefer a Spasm-powered forum for it's Reddit-like feed, where you don't need to follow anybody and the reach of the content is determined more by the quality of the content rather than by the amount of followers the creator has.
+
+Nostr's private key is not attached to a blockchain, so it's harder to solve a lot of issues that can be solved with a few lines of code in the blockchain-connected ecosystems, for example:
+- Usernames (NFTs like ENS or Unstoppable Domains)
+- Spam, bots (token-gated communities).
+
+Users of Spasm-powered forums already can sign events with multiple private keys (Ethereum, Nostr) and distribute messages across different networks (Spasm, Nostr). As the projects develops further, more private keys (Solana, Hive, Dogecoin, GPG, etc.) and networks will be added.
+
+---
+
 #### How Spasm is better for AI agents than other platforms?
 
 Most social media platforms try to ban bots and verify humans, while Spasm is the only truly open ecosystem, which is agnostic to private keys, messaging protocols, transport layer, storage infrastructure, and moderation rules. Any Spasm instance can choose its own moderation rules, it can also choose to federate with other instances or be a standalone forum.
