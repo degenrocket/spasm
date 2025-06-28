@@ -54,6 +54,22 @@ Users of Spasm-powered forums already can sign events with multiple private keys
 
 ---
 
+#### Explain multi-signed events
+
+To understand multi-signing, we have to start with single-signed events.
+
+Nostr events signed with Nostr keys. When a user signs a message using a Nostr protocol (JSON object) with a Nostr private key, that message can be propagated across both Nostr and Spasm networks. All the comments from both Spasm and Nostr networks can then be aggregated on a Spasm-powered app, but the author can't use features from the Ethereum ecosystem (e.g. ENS, token-gated forums, etc.)
+
+Spasm events signed with Ethereum keys. When a user signs a Spasm event with an Ethereum private key only, he can utilize features from the Ethereum ecosystem like unique names (ENS), access token-gated communities, but the signed event can't be propagated through the Nostr network due to the closed nature of the latter.
+
+Multi-signed events signed with Ethereum and Nostr keys. Now, multi-signed events are a completely revolutionary idea that allows a message to be signed not only with different signing keys, but also using different protocols (e.g., Spasm and Nostr JSON objects), while sharing the same deterministic Spasm ID, and unlocking propagation of that events across different networks.
+
+When a multi-signed message propagates in Spasm network, all signers are displayed (e.g., Nostr and Ethereum pubkeys), so an author can utilize all the features of the Ethereum and Nostr ecosystems like having a unique username (ENS), a Nostr description/about info, access Ethereum token-gated forums, provide readers with different social graph-based 'follow' options, and chain together comments from different networks.
+
+In other words, users don't have to decide which signer or protocol to choose, because they can use all of them at the same time.
+
+---
+
 #### How Spasm is better for AI agents than other platforms?
 
 Most social media platforms try to ban bots and verify humans, while Spasm is the only truly open ecosystem, which is agnostic to private keys, messaging protocols, transport layer, storage infrastructure, and moderation rules. Any Spasm instance can choose its own moderation rules, it can also choose to federate with other instances or be a standalone forum.
