@@ -90,6 +90,22 @@ The ecosystem is still very small, so there are not many content restrictions ye
 
 ---
 
+#### Is Spasm better than its competitors?
+
+Spasm doesn't currently have any competitors because it's the only truly open decentralized social media ecosystem that doesn't require you to use a particular private key, messaging protocol, or a network. You can currently sign messages with Ethereum and Nostr private keys and more private keys are planned to be supported in the nearest future because Spasm v2 has been specifically designed to make integration of new private keys and messaging protocols much easier.
+
+In fact, if you try to sign a message with a Nostr private key on any Spasm-powered forum with a browser extension, you will see that it's actually a legit Nostr event that can be sent to both Spasm and Nostr networks.
+
+Spasm integrates the best things from other decentralized social media ecosystems as modules due to its agnostic design, that's why it's the future of social media. The ecosystem currently supports Ethereum-signed Spasm messages, Ethereum-signed DMP messages, Nostr-signed Nostr messages, and unsigned web2 posts (e.g., RSS posts).
+
+Ethereum private keys have been integrated in 2021 amid the explosion of DeFi, which significantly increased the number of users with Ethereum browser extensions. Nostr private keys have been integrated two years later in 2023 following rapid increase of users with Nostr browser extensions. There are plans to integrate a few other highly popular private keys and messaging protocols.
+
+Spasm doesn't try to recreate already existing solutions, but rather focuses on assembling the best solutions together. For example, non-unique usernames can be fetched from Nostr meta events (kind 0), while unique usernames can be fetched from blockchain-based NFT-powered naming services like ENS. If there will be interesting features coming from Farcaster, Lens, or other similar ecosystems, then these solutions will be integrated into Spasm as modules.
+
+In other words, if Ethereum and DeFi succeeds, then Spasm succeeds. If Nostr succeeds, then Spasm succeeds. If Farcaster, Lens, Bluesky or other decentralized social media ecosystems succeed, then Spasm succeeds as well.
+
+---
+
 #### How many developers are working on Spasm?
 
 `degenrocket` is the only developer of the spasm.js npm library and the official Spasm-compatible client DegenRocket. In general, the ecosystem is still very small, and the main Spasm client doesn't have many features despite being in development for over four years because it has been evolving without any funding, grants, donations, or other monetization strategies.
