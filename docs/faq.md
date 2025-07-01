@@ -106,6 +106,24 @@ In other words, if Ethereum and DeFi succeeds, then Spasm succeeds. If Nostr suc
 
 ---
 
+> Why Spasm doesn't have a network effect problem?
+
+Other decentralized social media ecosystems face the network effect problem because they try to lock users within their ecosystems, requiring the usage of a certain private key, messaging protocol and network. Thus, if such an ecosystem doesn't have enough users, then you won't find enough interesting content to consume and your content won't get any exposure.
+
+For example, if you create a new account on Twitter-like social media platforms that rely on a social graph, you will quickly find out that your newly generated content will have almost no exposure, unless you're a very famous person. You can get some exposure if the platform is very new, but you then won't see much interesting content to interact with. In other words, platforms need a lot of users to attract more users, but it's hard to get new users when you don't have enough users, especially in a highly competitive environment of decentralized social media. 
+
+Spasm is different. It solves these two problems with two different strategies.
+
+Problem 1. Lack of content.
+
+Since Spasm is an agnostic ecosystem, it can show content from different networks. For example, a Spasm-powered forum can enable an RSS module, which will fetch posts from various RSS feeds and show them to a user, giving him an opportunity to consume a lot of topic-specific content even if that particular forum will doesn't have any user-generated content at all. Another approach is to show content from networks with a lot of activity such as the Nostr network.
+
+Problem 2. Lack of exposure.
+
+Spasm-powered forums don't use a social graph, i.e., there are no followers, so the exposure of the content doesn't depend on the amount of followers a user has. Thus, a completely new user can create a new post or submit a new comment for the first time and get immediate exposure if that content will be upvoted by other users on the same instance. In general, Spasm-powered forums are great for smaller communities, which increases the chances of getting exposure. You can think about Spasm instances as subreddits, which can exchange upvoted posts if they choose to federate with each other.
+
+---
+
 #### How many developers are working on Spasm?
 
 `degenrocket` is the only developer of the spasm.js npm library and the official Spasm-compatible client DegenRocket. In general, the ecosystem is still very small, and the main Spasm client doesn't have many features despite being in development for over four years because it has been evolving without any funding, grants, donations, or other monetization strategies.
