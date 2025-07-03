@@ -124,6 +124,16 @@ Spasm-powered forums don't use a social graph, i.e., there are no followers, so 
 
 ---
 
+#### What's your strategy to get mass adoption and is it even a goal?
+
+There are a lot of communities which need online forums with an ability to sign posts and comments with private keys. For example, almost all DeFi protocols have DAOs and they have to discuss proposals before voting on them. Unfortunately, they currently have to either use traditional web2-like online forums with an email and password registration, or use centralized web2 platforms which not only track users and often block VPN/Tor, but also frequently censor users and even ban whole communities.
+
+Spasm is the endgame of social media, but there might be people who will choose to or will be coerced to use centralized platforms instead. For example, cryptocurrencies are a much better financial tool than fiat-based tools provided by the traditional financial system, and yet the majority of people are still preferring the latter. 
+
+As the agentic economy emerges, there will be increasingly more demand for truly censor-resistant open ecosystems with agnostic architectures where humans and AI agents can thrive together.
+
+---
+
 #### How many developers are working on Spasm?
 
 `degenrocket` is the only developer of the spasm.js npm library and the official Spasm-compatible client DegenRocket. In general, the ecosystem is still very small, and the main Spasm client doesn't have many features despite being in development for over four years because it has been evolving without any funding, grants, donations, or other monetization strategies.
