@@ -106,7 +106,7 @@ In other words, if Ethereum and DeFi succeeds, then Spasm succeeds. If Nostr suc
 
 ---
 
-> Why Spasm doesn't have a network effect problem?
+#### Why Spasm doesn't have a network effect problem?
 
 Other decentralized social media ecosystems face the network effect problem because they try to lock users within their ecosystems, requiring the usage of a certain private key, messaging protocol and network. Thus, if such an ecosystem doesn't have enough users, then you won't find enough interesting content to consume and your content won't get any exposure.
 
