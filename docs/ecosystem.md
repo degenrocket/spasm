@@ -1,20 +1,31 @@
 ## Ecosystem
 
-#### Spasm instances:
 
-[degenrocket.space](https://degenrocket.space) (since 2021) - DeFi, NFT, privacy news aggregator.
+#### About
 
-[dark.vegas](https://dark.vegas) (since 2023) - lunarpunk anti-memecoins.
+[spasm.network](https://spasm.network) - official website
 
-[monero.top](https://monero.top) (since 2024) - Monero forum.
+[slides.spasm.network](https://slides.spasm.network) - slides
 
-[forum.simplifiedprivacy.com](https://forum.simplifiedprivacy.com) (since 2024) - AnCap, libertarian news and cypherpunk tech.
-
-[demo.spasm.network](https://demo.spasm.network) - demo playground.
+[forum.spasm.network](https://forum.spasm.network) - forum
 
 ---
 
-#### Tech:
+#### Spasm instances
+
+[degenrocket.space](https://degenrocket.space) (since 2021) - DeFi, NFT, privacy news aggregator
+
+[dark.vegas](https://dark.vegas) (since 2023) - lunarpunk forum
+
+[monero.top](https://monero.top) (since 2024) - Monero forum
+
+[forum.simplifiedprivacy.com](https://forum.simplifiedprivacy.com) (since 2024) - AnCap, libertarian news and cypherpunk tech
+
+[demo.spasm.network](https://demo.spasm.network) - demo playground
+
+---
+
+#### Tech
 
 [degenrocket-web](https://github.com/degenrocket/degenrocket-web) - Spasm-powered forum (UI)
 
